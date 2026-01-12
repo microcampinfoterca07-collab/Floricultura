@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flora Mais - Nossa História</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configuração de Fonte Padrão e Estilos Gerais */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f3f8; /* Fundo pastel muito claro */
+            transition: background-color 0.5s ease;
+        }
+
+        /* Classes de Cores Pastel */
+        .pastel-text { color: #835269; } /* Marrom Rosado para texto */
+
+        /* 1. Animação do Título "Flora Natureza" */
+        @keyframes color-change {
+            0% { color: #f472b6; transform: translateY(0px); } /* Pink */
+            33% { color: #a78bfa; transform: translateY(-3px); } /* Violet */
+            66% { color: #facc15; transform: translateY(3px); } /* Yellow */
+            100% { color: #f472b6; transform: translateY(0px); }
+        }
+
+        .animated-title {
+            animation: color-change 4s infinite alternate ease-in-out;
+            display: inline-block;
+        }
+
+        /* 2. Fixed Image Backgrounds para a História */
+        .bg-fixed-flor {
+            background-image: url('https://placehold.co/1200x800/e9d5ff/835269?text=Flores');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        /* 4. Estilo do Conteúdo (para dar respiro em backgrounds de imagem) */
+        .content-card {
+            background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+        }
+
+        /* 5. Estilo do Rodapé Transparente */
+        .footer-transparent {
+            background-color: rgba(255, 255, 255, 0.5); /* Branco com 50% de transparência */
+        }
+    </style>
+</head>
+<body class="bg-fixed-flor">
+
+    <!-- CABEÇALHO E NAVEGAÇÃO -->
+    <header class="bg-white/70 backdrop-blur-sm shadow-lg fixed top-0 w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center py-4">
+            <!-- Título Animado -->
+            <h1 class="text-4xl font-extrabold tracking-wider">
+                <span class="animated-title">Flora Mais</span>
+            </h1>
+
+            <!-- Menu Interativo -->
+            <nav class="mt-4 md:mt-0">
+                <ul class="flex space-x-4 sm:space-x-6 md:space-x-8 text-lg font-medium">
+                    <li><a href="index.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Início</a></li>
+                    <li><a href="historia.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Nossa História</a></li>
+                    <li><a href="buques.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Buquês</a></li>
+                    <li><a href="cestas.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Cestas</a></li>
+                    <li><a href="cadastro.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL (Main Content) -->
+    <main class="pt-28 pb-16 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- PÁGINA NOSSA HISTÓRIA - Imagem Fixa -->
+            <div id="page-historia" class="p-8 rounded-xl shadow-2xl">
+                <div class="content-card p-6 rounded-xl max-w-3xl mx-auto shadow-xl">
+                    <h2 class="text-4xl font-light text-center pastel-text mb-6">Nossa História: A Semente da Flora Mais</h2>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                        A Flora Mais nasceu de um sonho singelo de Dona Aurora, uma senhora que dedicou sua vida ao cultivo. Após anos de trabalho em seu pequeno quintal, ela percebeu que a alegria das flores era um presente que não podia guardar só para si. Em 1995, com um punhado de sementes e o apoio de sua neta, Sofia, que trazia consigo a energia e o design moderno, a primeira lojinha foi aberta.
+                    </p>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                        Aurora ensinou a Sofia que cada flor tem uma história e uma emoção: a rosa vermelha, o amor; o girassol, a alegria; e a lavanda, a calma. A Flora Mais não vende apenas buquês; vende sentimentos, cuidadosamente montados e entregues com um bilhete escrito à mão. É essa mistura de tradição, carinho e o olhar moderno de Sofia que faz da nossa floricultura um lugar especial, onde toda flor é, de fato, "mais" do que parece.
+                    </p>
+                    <p class="text-center italic text-sm text-gray-500 mt-6">"Plantar carinho para colher sorrisos." - Dona Aurora.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer-transparent fixed bottom-0 left-0 w-full p-4 z-10">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-lg font-medium text-gray-800 italic">
+                "Onde a alma encontra a cor e o perfume que faltavam no dia."
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

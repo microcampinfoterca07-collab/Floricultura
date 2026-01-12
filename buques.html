@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flora Mais - Buquês</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configuração de Fonte Padrão e Estilos Gerais */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f3f8; /* Fundo pastel muito claro */
+            transition: background-color 0.5s ease;
+        }
+
+        /* Classes de Cores Pastel */
+        .pastel-text { color: #000000; } /* Black para texto */
+
+        /* 1. Animação do Título "Flora Natureza" */
+        @keyframes color-change {
+            0% { color: #f472b6; transform: translateY(0px); } /* Pink */
+            33% { color: #0000FF; transform: translateY(-3px); } /* Blue */
+            66% { color:#7B68EE; transform: translateY(3px); } /* MediumSlateBlue */
+            100% { color: #66CDAA; transform: translateY(0px); }
+        }
+
+        .animated-title {
+            animation: color-change 4s infinite alternate ease-in-out;
+            display: inline-block;
+        }
+
+        /* 3. Gradiente para Buquês */
+        .bg-gradient-pastel {
+            background: linear-gradient(135deg, #fce7f3 0%, #e9d5ff 100%); /* Rosa -> Lilás */
+            min-height: 100vh;
+        }
+
+        /* 4. Estilo do Conteúdo (Para dar respiro em backgrounds de imagem/gradiente) */
+        .content-card {
+            background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+            min-height: 70vh;
+        }
+
+        /* 5. Estilo do Rodapé Transparente */
+        .footer-transparent {
+            background-color: rgba(255, 255, 255, 0.5); /* Branco com 50% de transparência */
+        }
+    </style>
+</head>
+<body class="bg-gradient-pastel">
+
+    <!-- CABEÇALHO E NAVEGAÇÃO -->
+    <header class="bg-white/70 backdrop-blur-sm shadow-lg fixed top-0 w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center py-4">
+            <!-- Título Animado -->
+            <h1 class="text-4xl font-extrabold tracking-wider">
+                <span class="animated-title">Flora Mais</span>
+            </h1>
+
+            <!-- Menu Interativo -->
+            <nav class="mt-4 md:mt-0">
+                <ul class="flex space-x-4 sm:space-x-6 md:space-x-8 text-lg font-medium">
+                    <li><a href="index.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Início</a></li>
+                    <li><a href="historia.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Nossa História</a></li>
+                    <li><a href="buques.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Buquês</a></li>
+                    <li><a href="cestas.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Cestas</a></li>
+                    <li><a href="cadastro.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL (Main Content) -->
+    <main class="pt-28 pb-16 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- PÁGINA BUQUÊS - Gradiente -->
+            <div id="page-buques" class="content-card p-8 rounded-xl shadow-2xl">
+                <h2 class="text-4xl font-light text-center pastel-text mb-8">Nossos Buquês Delicados</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Buquê 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-pink-300">
+                        <img src="" alt="Imagem de Buquê Primavera" class="w-full h-48 object-cover rounded-lg mb-4 shadow-inner">
+                        <h3 class="text-2xl font-semibold pastel-text">Buquê Primavera Suave</h3>
+                        <p class="text-gray-600 mt-2">Mix de Rosas (cores pastel) e Astromélias brancas. Leveza e frescor.</p>
+                        <p class="text-3xl font-bold mt-4 text-pink-600">R$ 125,00</p>
+                        <button class="mt-4 w-full bg-pink-400 text-white py-2 rounded-full hover:bg-pink-500 transition duration-300">Comprar</button>
+                    </div>
+
+                    <!-- Buquê 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-purple-300">
+                        <img src="https://img.cdndsgni.com/preview/13212762.jpg=Buqu%C3%AA+Lavanda" alt="Imagem de Buquê Lavanda" class="w-full h-48 object-cover rounded-lg mb-4 shadow-inner">
+                        <h3 class="text-2xl font-semibold pastel-text">Toque de Lavanda</h3>
+                        <p class="text-gray-600 mt-2">Rosas lilás e Lavandas. Ideal para trazer calma e sofisticação.</p>
+                        <p class="text-3xl font-bold mt-4 text-pink-600">R$ 180,00</p>
+                        <button class="mt-4 w-full bg-pink-400 text-white py-2 rounded-full hover:bg-pink-500 transition duration-300">Comprar</button>
+                    </div>
+
+                    <!-- Buquê 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-yellow-300">
+                        <img src="https://placehold.co/400x400/fff3b8/835269?text=Buqu%C3%AA+Luz" alt="Imagem de Buquê Luz" class="w-full h-48 object-cover rounded-lg mb-4 shadow-inner">
+                        <h3 class="text-2xl font-semibold pastel-text">Luz de Girassol</h3>
+                        <p class="text-gray-600 mt-2">Mini Girassóis e Margaridas. Perfeito para irradiar alegria e energia.</p>
+                        <p class="text-3xl font-bold mt-4 text-pink-600">R$ 95,00</p>
+                        <button class="mt-4 w-full bg-pink-400 text-white py-2 rounded-full hover:bg-pink-500 transition duration-300">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer-transparent fixed bottom-0 left-0 w-full p-4 z-10">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-lg font-medium text-gray-800 italic">
+                "Onde a alma encontra a cor e o perfume que faltavam no dia."
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

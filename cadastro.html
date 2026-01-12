@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flora Natureza - Cadastro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configuração de Fonte Padrão e Estilos Gerais */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f3f8; /* Fundo pastel muito claro */
+            transition: background-color 0.5s ease;
+        }
+
+        /* Classes de Cores Pastel */
+        .pastel-text { color: #835269; } /* Marrom Rosado para texto */
+
+        /* 1. Animação do Título "Flora Natureza" */
+        @keyframes color-change {
+            0% { color: #f472b6; transform: translateY(0px); } /* Pink */
+            33% { color: #a78bfa; transform: translateY(-3px); } /* Violet */
+            66% { color: #facc15; transform: translateY(3px); } /* Yellow */
+            100% { color: #f472b6; transform: translateY(0px); }
+        }
+
+        .animated-title {
+            animation: color-change 4s infinite alternate ease-in-out;
+            display: inline-block;
+        }
+
+        /* 3. Gradiente para Cadastro */
+        .bg-gradient-pastel {
+            background: linear-gradient(135deg, #fce7f3 0%, #e9d5ff 100%); /* Rosa -> Lilás */
+            min-height: 100vh;
+        }
+
+        /* 4. Estilo do Conteúdo (Para dar respiro em backgrounds de imagem/gradiente) */
+        .content-card {
+            background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+            min-height: 70vh;
+        }
+
+        /* 5. Estilo do Rodapé Transparente */
+        .footer-transparent {
+            background-color: rgba(255, 255, 255, 0.5); /* Branco com 50% de transparência */
+        }
+    </style>
+    <script>
+        // Função para lidar com o envio do formulário (apenas demonstração)
+        function handleRegistration(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            // Simulação de envio
+            const messageBox = document.getElementById('registration-message');
+            messageBox.innerHTML = `
+                <p class="text-green-600 font-semibold">
+                    Cadastro de ${name} com email ${email} enviado com sucesso!
+                </p>
+                <p>Em breve você receberá nossas novidades.</p>
+            `;
+            // Limpa o formulário
+            event.target.reset();
+        }
+
+        // Adiciona o listener do formulário ao carregar a página
+        window.onload = () => {
+            document.getElementById('registration-form').addEventListener('submit', handleRegistration);
+        };
+    </script>
+</head>
+<body class="bg-gradient-pastel">
+
+    <!-- CABEÇALHO E NAVEGAÇÃO -->
+    <header class="bg-white/70 backdrop-blur-sm shadow-lg fixed top-0 w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center py-4">
+            <!-- Título Animado -->
+            <h1 class="text-4xl font-extrabold tracking-wider">
+                <span class="animated-title">Flora Mais</span>
+            </h1>
+
+            <!-- Menu Interativo -->
+            <nav class="mt-4 md:mt-0">
+                <ul class="flex space-x-4 sm:space-x-6 md:space-x-8 text-lg font-medium">
+                    <li><a href="index.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Início</a></li>
+                    <li><a href="historia.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Nossa História</a></li>
+                    <li><a href="buques.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Buquês</a></li>
+                    <li><a href="cestas.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Cestas</a></li>
+                    <li><a href="cadastro.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL (Main Content) -->
+    <main class="pt-28 pb-16 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- PÁGINA CADASTRO - Gradiente -->
+            <div id="page-cadastro" class="content-card p-8 rounded-xl shadow-2xl">
+                <div class="max-w-md mx-auto p-8 bg-white/90 rounded-xl shadow-2xl border-t-4 border-pink-300">
+                    <h2 class="text-4xl font-light text-center pastel-text mb-6">Cadastre-se e Receba Novidades</h2>
+                    <p class="text-center text-gray-600 mb-6">Ganhe um cupom de 10% de desconto na primeira compra!</p>
+                    <form id="registration-form" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium pastel-text mb-1">Nome Completo</label>
+                            <input type="text" id="name" name="name" required
+                                   class="w-full px-4 py-2 border border-pink-200 rounded-lg focus:ring-pink-400 focus:border-pink-400 transition duration-150">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium pastel-text mb-1">E-mail</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-2 border border-pink-200 rounded-lg focus:ring-pink-400 focus:border-pink-400 transition duration-150">
+                        </div>
+                        <button type="submit"
+                                class="w-full bg-pink-400 text-white font-semibold py-3 rounded-full hover:bg-pink-500 transition duration-300 shadow-lg">
+                            Cadastrar
+                        </button>
+                    </form>
+                    <div id="registration-message" class="mt-4 text-center">
+                        <!-- Mensagem de sucesso aparecerá aqui -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer-transparent fixed bottom-0 left-0 w-full p-4 z-10">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-lg font-medium text-gray-800 italic">
+                "Onde a alma encontra a cor e o perfume que faltavam no dia."
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

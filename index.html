@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flora Natureza - Início</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configuração de Fonte Padrão e Estilos Gerais */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f3f8; /* Fundo pastel muito claro */
+            transition: background-color 0.5s ease;
+        }
+
+        /* Classes de Cores Pastel */
+        .pastel-text { color: #835269; } /* Marrom Rosado para texto */
+
+        /* 1. Animação do Título "Flora Natureza" */
+        @keyframes color-change {
+            0% { color: #f472b6; transform: translateY(0px); } /* Pink */
+            33% { color: #a78bfa; transform: translateY(-3px); } /* Violet */
+            66% { color: #facc15; transform: translateY(3px); } /* Yellow */
+            100% { color: #f472b6; transform: translateY(0px); }
+        }
+
+        .animated-title {
+            animation: color-change 4s infinite alternate ease-in-out;
+            display: inline-block;
+        }
+
+        /* 3. Gradiente para a Home */
+        .bg-gradient-pastel {
+            background: linear-gradient(135deg, #fce7f3 0%, #e9d5ff 100%); /* Rosa -> Lilás */
+            min-height: 100vh;
+        }
+
+        /* 4. Estilo do Conteúdo (Para dar respiro em backgrounds de imagem/gradiente) */
+        .content-card {
+            background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+            min-height: 70vh; /* Garante que o conteúdo tenha altura suficiente */
+        }
+
+        /* 5. Estilo do Rodapé Transparente */
+        .footer-transparent {
+            background-color: rgba(255, 255, 255, 0.5); /* Branco com 50% de transparência */
+        }
+    </style>
+</head>
+<body class="bg-gradient-pastel">
+
+    <!-- CABEÇALHO E NAVEGAÇÃO -->
+    <header class="bg-white/70 backdrop-blur-sm shadow-lg fixed top-0 w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center py-4">
+            <!-- Título Animado -->
+            <h1 class="text-4xl font-extrabold tracking-wider">
+                <span class="animated-title">Flora Mais</span>
+            </h1>
+
+            <!-- Menu Interativo -->
+            <nav class="mt-4 md:mt-0">
+                <ul class="flex space-x-4 sm:space-x-6 md:space-x-8 text-lg font-medium">
+                    <li><a href="index.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Início</a></li>
+                    <li><a href="historia.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Nossa História</a></li>
+                    <li><a href="buques.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Buquês</a></li>
+                    <li><a href="cestas.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Cestas</a></li>
+                    <li><a href="cadastro.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL (Main Content) -->
+    <main class="pt-28 pb-16 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- PÁGINA INÍCIO (Home) - Gradiente -->
+            <div id="page-home" class="content-card p-8 rounded-xl shadow-2xl">
+                <h2 class="text-5xl font-light text-center pastel-text mb-6">Seja Bem-vindo ao Jardim da Flora Mais</h2>
+                <p class="text-center text-xl text-gray-700 leading-relaxed">
+                    Onde a beleza das flores encontra a delicadeza dos sentimentos. Explore nossos buquês e presentes pensados para celebrar cada momento especial da sua vida.
+                </p>
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-4 bg-pink-100 rounded-xl shadow-md text-center">
+                        <svg class="w-12 h-12 mx-auto pastel-text mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <p class="font-semibold pastel-text">Entrega Rápida</p>
+                    </div>
+                    <div class="p-4 bg-pink-100 rounded-xl shadow-md text-center">
+                        <svg class="w-12 h-12 mx-auto pastel-text mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        <p class="font-semibold pastel-text">Feito com Amor</p>
+                    </div>
+                    <div class="p-4 bg-pink-100 rounded-xl shadow-md text-center">
+                        <svg class="w-12 h-12 mx-auto pastel-text mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                        <p class="font-semibold pastel-text">Flores Frescas</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer-transparent fixed bottom-0 left-0 w-full p-4 z-10">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-lg font-medium text-gray-800 italic">
+                "Onde a alma encontra a cor e o perfume que faltavam no dia."
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

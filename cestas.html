@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flora Natureza - Cestas de Presente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configuração de Fonte Padrão e Estilos Gerais */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f3f8; /* Fundo pastel muito claro */
+            transition: background-color 0.5s ease;
+        }
+
+        /* Classes de Cores Pastel */
+        .pastel-text { color: #835269; } /* Marrom Rosado para texto */
+
+        /* 1. Animação do Título "Flora Mais" */
+        @keyframes color-change {
+            0% { color: #f472b6; transform: translateY(0px); } /* Pink */
+            33% { color: #a78bfa; transform: translateY(-3px); } /* Violet */
+            66% { color: #facc15; transform: translateY(3px); } /* Yellow */
+            100% { color: #f472b6; transform: translateY(0px); }
+        }
+
+        .animated-title {
+            animation: color-change 4s infinite alternate ease-in-out;
+            display: inline-block;
+        }
+
+        /* 2. Fixed Image Backgrounds para Cestas */
+        .bg-fixed-cestas {
+            background-image: url('https://placehold.co/1200x800/fecaca/835269?text=Cestas');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        /* 4. Estilo do Conteúdo (para dar respiro em backgrounds de imagem) */
+        .content-card {
+            background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+        }
+
+        /* 5. Estilo do Rodapé Transparente */
+        .footer-transparent {
+            background-color: rgba(255, 255, 255, 0.5); /* Branco com 50% de transparência */
+        }
+    </style>
+</head>
+<body class="bg-fixed-cestas">
+
+    <!-- CABEÇALHO E NAVEGAÇÃO -->
+    <header class="bg-white/70 backdrop-blur-sm shadow-lg fixed top-0 w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center py-4">
+            <!-- Título Animado -->
+            <h1 class="text-4xl font-extrabold tracking-wider">
+                <span class="animated-title">Flora Mais</span>
+            </h1>
+
+            <!-- Menu Interativo -->
+            <nav class="mt-4 md:mt-0">
+                <ul class="flex space-x-4 sm:space-x-6 md:space-x-8 text-lg font-medium">
+                    <li><a href="index.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Início</a></li>
+                    <li><a href="historia.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Nossa História</a></li>
+                    <li><a href="buques.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Buquês</a></li>
+                    <li><a href="cestas.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Cestas</a></li>
+                    <li><a href="cadastro.html" class="pastel-text hover:text-white hover:bg-pink-400 p-2 rounded-lg transition duration-300">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL (Main Content) -->
+    <main class="pt-28 pb-16 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- PÁGINA CESTAS DE PRESENTE - Imagem Fixa -->
+            <div id="page-cestas" class="p-8 rounded-xl shadow-2xl">
+                 <div class="content-card p-6 rounded-xl max-w-4xl mx-auto shadow-xl">
+                    <h2 class="text-4xl font-light text-center pastel-text mb-8">Cestas de Presente para Momentos Únicos</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Cesta 1: Dia das Mães/Aniversário -->
+                        <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-pink-400 flex flex-col items-center text-center">
+                            <img src="https://placehold.co/400x300/f0abfc/ffffff?text=Cesta+M%C3%A3es" alt="Cesta de Presente Dia das Mães" class="w-full h-48 object-cover rounded-lg mb-4 shadow-inner">
+                            <h3 class="text-2xl font-semibold pastel-text">Cesta de Café da Manhã "Carinho"</h3>
+                            <p class="text-gray-600 mt-2">Ideal para Dia das Mães, Aniversários ou Datas Especiais. Acompanha buquê pequeno, pães artesanais e geleia.</p>
+                            <p class="text-3xl font-bold mt-4 text-pink-600">R$ 210,00</p>
+                        </div>
+
+                        <!-- Cesta 2: Dia dos Namorados/Aniversário de Namoro -->
+                        <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-red-400 flex flex-col items-center text-center">
+                            <img src="https://placehold.co/400x300/fda4af/ffffff?text=Cesta+Namorados" alt="Cesta Romântica Dia dos Namorados" class="w-full h-48 object-cover rounded-lg mb-4 shadow-inner">
+                            <h3 class="text-2xl font-semibold pastel-text">Cesta Romântica "Doce Amor"</h3>
+                            <p class="text-gray-600 mt-2">Perfeita para Dia dos Namorados. Contém vinho, chocolates finos e um arranjo de rosas vermelhas.</p>
+                            <p class="text-3xl font-bold mt-4 text-pink-600">R$ 289,90</p>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer-transparent fixed bottom-0 left-0 w-full p-4 z-10">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-lg font-medium text-gray-800 italic">
+                "Onde a alma encontra a cor e o perfume que faltavam no dia."
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
